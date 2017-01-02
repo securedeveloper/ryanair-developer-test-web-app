@@ -1,0 +1,91 @@
+<div class="row" ng-controller="flightFinderController as flightFinderCtrl">
+        <div class="searching-flights" ng-show="flightFinderCtrl.searchMode">&nbsp;</div>
+        <div class="large-12 columns">
+            <div class="callout clearfix">
+                <h3>{{flightFinderCtrl.context.pageTitle}}</h3>
+                <!-- Flight Search Form -->
+                <div class="flightFinderForm">
+                    <div class="row" ng-show="flightFinderCtrl.error">
+                        <div class="large-12 medium-12 small-12 columns">
+                            <span class="error radius round">{{flightFinderCtrl.error}}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 medium-12 columns">
+                            <input type="radio" name="flight-direction" value="return" id="flight-direction" checked="checked"><label for="flight-direction">{{flightFinderCtrl.context.returnFlight}}</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- FROM -->
+                        <div class="large-3 medium-6 small-12 columns">
+                            <div class="row collapse">
+                                <label>{{flightFinderCtrl.context.from}} </label>
+                                <div class="input-group">
+                                    <div angucomplete-alt placeholder="City or airport" tabindex="1" pause="1000" selected-object="flightFinderCtrl.airportFrom" local-data="flightFinderCtrl.airports" search-fields="name,iataCode" title-field="name" description-field="iataCode" minlength="1" input-class="input-group-field" match-class="highlight">
+                                    </div>
+                                    <span class="input-group-label">{{flightFinderCtrl.airportFrom.originalObject.iataCode}}</span>
+                                </div>
+                            </div><!-- // From -->
+                        </div>
+                        <div class="large-3 medium-6 small-12 columns">
+                            <div class="row collapse">
+                                <label>{{flightFinderCtrl.context.to}} </label>
+                                <div class="input-group">
+                                    <div angucomplete-alt placeholder="City or airport" tabindex="2" pause="1000" selected-object="flightFinderCtrl.airportTo" local-data="flightFinderCtrl.airports" search-fields="name,iataCode" title-field="name" description-field="iataCode" minlength="1" input-class="input-group-field" match-class="highlight">
+                                    </div>
+                                    <span class="input-group-label">{{flightFinderCtrl.airportTo.originalObject.iataCode}}</span>
+                                </div>
+                            </div><!-- // To -->
+                        </div>
+                        <div class="large-3 medium-6 small-12 columns">
+                            <div class="row collapse">
+                                <label>{{flightFinderCtrl.context.depart}} </label>
+                                <datepicker date-format="yyyy-MM-dd" date-min-limit="{{ flightFinderCtrl.minDateDepart }}" date-max-limit="{{ flightFinderCtrl.maxDateDepart }}">
+                                    <input ng-model="flightFinderCtrl.depart" type="text" tabindex="3" class="angular-datepicker-input" />
+                                </datepicker>
+                            </div>
+                        </div>
+                        <div class="large-3 medium-6 small-12 columns">
+                            <div class="row collapse">
+                                <label>{{flightFinderCtrl.context.return}} </label>
+                                <datepicker date-format="yyyy-MM-dd" date-max-limit="{{ flightFinderCtrl.maxDateReturn }}" date-min-limit="{{ flightFinderCtrl.minDateReturn }}">
+                                    <input ng-model="flightFinderCtrl.return" type="text" tabindex="4" class="angular-datepicker-input" />
+                                </datepicker>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 medium-12 small-12 columns">
+                            <a class="button clearfix float-right radius round" ng-click="flightFinderCtrl.searchFlights()">{{flightFinderCtrl.context.searchFlights}}</a>
+                        </div>
+                    </div>
+                </div><!-- //Flight Search Form -->
+                <!-- Flight Search Results -->
+                <div class="flightFinderResult" ng-show="flightFinderCtrl.resultMode">
+                    <div class="row collapse no-results" ng-show="flightFinderCtrl.noResults">
+                      <div class="large-12 medium-12 small-12 columns">
+                        <a ng-click="flightFinderCtrl.searchFlights()" class="error">
+                          {{flightFinderCtrl.context.noResultFound}}
+                        </a>
+                      </div>
+                    </div>
+                    <div class="row collapse result-header" ng-hide="flightFinderCtrl.noResults">
+                      <div class="large-4 medium-4 small-12 columns result-date-from-label">Date From </div>
+                      <div class="large-4 medium-4 small-12 columns result-date-to-label">Date To </div>
+                      <div class="large-3 medium-4 small-12 columns result-label">Price</div>
+                    </div>
+                    <div class="row collapse result"  ng-hide="flightFinderCtrl.noResults" ng-repeat="result in flightFinderCtrl.results.flights">
+                        <div class="large-4 medium-4 small-12 columns result-date-from">
+                          {{result.dateFrom | date:"yyyy-MM-dd HH:mm"}}
+                        </div>
+                        <div class="large-4 medium-4 small-12 columns result-date-to">
+                          {{result.dateTo | date:"yyyy-MM-dd HH:mm"}}
+                        </div>
+                        <div class="large-3 medium-4 small-12 columns result-price">
+                          {{result.price | currency:result.currency}}
+                        </div>
+                    </div>
+                </div>
+            </div><!-- callout  -->
+        </div><!-- //large-12 -->
+    </div><!-- //row -->

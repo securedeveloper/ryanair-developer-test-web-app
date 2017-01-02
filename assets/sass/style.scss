@@ -1,0 +1,234 @@
+$bg : '../images/background.jpg';
+$loading : '../images/loading/loading_default_en.gif';
+$bgSize : cover;
+$transparentBlackColor : rgba(20,20,20,0.4);
+$transparentWhiteColor : rgba(250,250,250,0.5);
+$white : #FFFFFF;
+$black : #000000;
+$red   : #FF0000;
+$transparent : rgba(255,255,255,0);
+$whitish : rgba(255,255,255,0.8);
+$red : rgba(255,0,0,0.9);
+/*
+	STYLING FROM HERE
+*/
+html { 
+  background: url($bg) no-repeat center center fixed; 
+  -webkit-background-size: $bgSize;
+  -moz-background-size: $bgSize;
+  -o-background-size: $bgSize;
+  background-size: $bgSize;
+}
+
+body{
+	background-color:$transparent;
+}
+
+.header, .header-dark
+{
+	background-color:$transparentBlackColor;
+	padding:.2em 1em;
+	margin-left  : auto;
+	margin-right : auto;
+	text-align:center;
+	h3
+	{
+		display:inline-block;
+  		color: $white;
+  		text-shadow: 0 .1em 0 rgba(155, 155, 155, 0.8);
+	}
+	ul.menu,ul.languages
+	{
+		display:inline-block;
+		list-style-type:none;
+	}
+	ul.menu li
+	{
+		display:inline-block;
+		padding:.5em 1em;
+		margin-top:.3em;
+		background-color:$transparentBlackColor;
+		&:hover
+		{
+			background-color:$black;
+		}
+	}
+
+	ul.menu li.active
+	{
+		background-color:$black;
+	}
+
+	ul.menu li a
+	{
+		color:$white;
+		text-transform:uppercase;
+	}
+
+	ul.languages li
+	{
+		display:inline-block;
+		padding:.2em .5em;
+		margin-top:.3em;
+		&:hover
+		{
+			cursor:pointer;
+		}
+	}
+
+	ul.languages li img
+	{
+		padding:0;
+		margin:0;
+		width:1.5em;
+		height:1.5em;
+	}
+
+}
+
+.header-dark
+{
+	background-color:$black !important;
+}
+
+.callout
+{
+	background-color:$transparent;
+	border:none;
+	@media screen and (min-width: 480px) {
+		h3
+		{
+			color:$white;
+		}
+	}
+}
+
+.highlight 
+{
+	color: $red;
+}
+
+.searching-flights
+{
+	position:fixed;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	z-index:99999;
+	background:url($loading) no-repeat;
+	background-color:$white;
+	background-position:center;
+}
+
+.flightFinderForm
+{
+	background-color:$transparentBlackColor;
+	padding:1em 2em;
+	border-radius:1em;
+	label 
+	{
+		color:$white;
+	}
+}
+.flightFinderResult
+{
+	.result,.result-header
+	{
+		background-color:$whitish;
+		color:$black;
+		margin-top:1em;
+		margin-bottom:.2em;
+		padding-left:8.8%;
+	}
+	.no-results
+	{
+		margin-top:1em;
+		margin-bottom:.2em;
+	}
+	.result-header
+	{
+		background-color:$white;
+	}
+	.result-date-from,.result-date-to,.result-price,.result-date-from-label,.result-date-to-label,.result-label
+	{
+		font-size : 1.5em;
+		text-align:center;
+	}
+	.result-date-from-label,.result-date-to-label,.result-label
+	{
+		font-size : 2em;
+		font-weight:bold;
+	}
+	.result-price
+	{
+		font-size : 2em;
+		font-weight:bold;
+	}
+	.result-price, .result-label{
+		margin-right: 8.33333%;
+	}
+}
+@media screen and (max-width : 480px)
+{
+	.result-header
+	{
+		display:none !important;
+	}	
+}
+h3.route-maps-heading
+{
+	margin:2em;
+}
+/* Utility Classes */
+@media screen and (min-width: 480px) {
+	.clearfix
+	{
+		clear:both !important;
+	}
+	.float-right
+	{
+		float:right !important;
+	}
+	.float-left
+	{
+		float:left !important;
+	}
+	.float-center
+	{
+		margin-left:auto !important;
+		margin-right:auto !important;
+	}
+	h3.route-maps-heading
+	{
+		color:$white;
+	}
+}
+
+button.radius, .button.radius 
+{
+    border-radius: 3px; 
+}
+
+button.round, .button.round 
+{
+    border-radius: 1000px; 
+}
+.error
+{
+	color:$red;
+	display:block;
+	padding:.5em 1em;
+	text-align:center;
+	background-color:$white;	
+}
+#mapDiv
+{
+	background-color:$transparentWhiteColor;
+	position:fixed;
+	top:4em;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:-1;
+}

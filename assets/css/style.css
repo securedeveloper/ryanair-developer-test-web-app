@@ -1,0 +1,56 @@
+/*
+	STYLING FROM HERE
+*/
+html { background: url("../images/background.jpg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+
+body { background-color: rgba(255, 255, 255, 0); }
+
+.header, .header-dark { background-color: rgba(20, 20, 20, 0.4); padding: .2em 1em; margin-left: auto; margin-right: auto; text-align: center; }
+.header h3, .header-dark h3 { display: inline-block; color: #FFFFFF; text-shadow: 0 0.1em 0 rgba(155, 155, 155, 0.8); }
+.header ul.menu, .header ul.languages, .header-dark ul.menu, .header-dark ul.languages { display: inline-block; list-style-type: none; }
+.header ul.menu li, .header-dark ul.menu li { display: inline-block; padding: .5em 1em; margin-top: .3em; background-color: rgba(20, 20, 20, 0.4); }
+.header ul.menu li:hover, .header-dark ul.menu li:hover { background-color: #000000; }
+.header ul.menu li.active, .header-dark ul.menu li.active { background-color: #000000; }
+.header ul.menu li a, .header-dark ul.menu li a { color: #FFFFFF; text-transform: uppercase; }
+.header ul.languages li, .header-dark ul.languages li { display: inline-block; padding: .2em .5em; margin-top: .3em; }
+.header ul.languages li:hover, .header-dark ul.languages li:hover { cursor: pointer; }
+.header ul.languages li img, .header-dark ul.languages li img { padding: 0; margin: 0; width: 1.5em; height: 1.5em; }
+
+.header-dark { background-color: #000000 !important; }
+
+.callout { background-color: rgba(255, 255, 255, 0); border: none; }
+@media screen and (min-width: 480px) { .callout h3 { color: #FFFFFF; } }
+
+.highlight { color: rgba(255, 0, 0, 0.9); }
+
+.searching-flights { position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 99999; background: url("../images/loading/loading_default_en.gif") no-repeat; background-color: #FFFFFF; background-position: center; }
+
+.flightFinderForm { background-color: rgba(20, 20, 20, 0.4); padding: 1em 2em; border-radius: 1em; }
+.flightFinderForm label { color: #FFFFFF; }
+
+.flightFinderResult .result, .flightFinderResult .result-header { background-color: rgba(255, 255, 255, 0.8); color: #000000; margin-top: 1em; margin-bottom: .2em; padding-left: 8.8%; }
+.flightFinderResult .no-results { margin-top: 1em; margin-bottom: .2em; }
+.flightFinderResult .result-header { background-color: #FFFFFF; }
+.flightFinderResult .result-date-from, .flightFinderResult .result-date-to, .flightFinderResult .result-price, .flightFinderResult .result-date-from-label, .flightFinderResult .result-date-to-label, .flightFinderResult .result-label { font-size: 1.5em; text-align: center; }
+.flightFinderResult .result-date-from-label, .flightFinderResult .result-date-to-label, .flightFinderResult .result-label { font-size: 2em; font-weight: bold; }
+.flightFinderResult .result-price { font-size: 2em; font-weight: bold; }
+.flightFinderResult .result-price, .flightFinderResult .result-label { margin-right: 8.33333%; }
+
+@media screen and (max-width: 480px) { .result-header { display: none !important; } }
+h3.route-maps-heading { margin: 2em; }
+
+/* Utility Classes */
+@media screen and (min-width: 480px) { .clearfix { clear: both !important; }
+  .float-right { float: right !important; }
+  .float-left { float: left !important; }
+  .float-center { margin-left: auto !important; margin-right: auto !important; }
+  h3.route-maps-heading { color: #FFFFFF; } }
+button.radius, .button.radius { border-radius: 3px; }
+
+button.round, .button.round { border-radius: 1000px; }
+
+.error { color: rgba(255, 0, 0, 0.9); display: block; padding: .5em 1em; text-align: center; background-color: #FFFFFF; }
+
+#mapDiv { background-color: rgba(250, 250, 250, 0.5); position: fixed; top: 4em; left: 0; right: 0; bottom: 0; z-index: -1; }
+
+/*# sourceMappingURL=style.css.map */

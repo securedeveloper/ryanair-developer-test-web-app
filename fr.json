@@ -1,0 +1,27 @@
+{
+	"main": 
+	{
+		"title" : "Bienvenue chez RyanAir",
+		"menu" : 
+		{
+			"item1" : "Vols pas chers",
+			"item2" : "Cartes d'itinéraire"
+		}
+	},
+	
+	"flightFinder" : {
+		"pageTitle": "Recherchez un vol pas cher!",
+		"returnFlight" : "Vol de retour",
+		"from" : "De",
+		"to" : "À",
+		"depart":"partir",
+		"return" : "retour",
+		"searchFlights":"Recherche",
+		"error":"Assurez-vous de sélectionner tous les champs obligatoires!",
+		"noResultFound" : "Aucun vol trouvé, essayez de nouveau!"
+ 	},
+	
+	"routeMaps":{
+		"pageTitle" : "Cartes d'itinéraire"
+	}
+}
