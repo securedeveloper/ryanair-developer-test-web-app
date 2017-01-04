@@ -1,3 +1,10 @@
+# [DEMO](https://securedeveloper.github.io/ryanair-developer-test-web-app/)
+
+## NOTE 
+
+Please update link of `<base href="https://securedeveloper.github.io/ryanair-developer-test-web-app/" />` before running this project.
+usually you are required to set it to your localserver or hosted server path, in my case if was `<base href="http://localhost:88/" />`.
+
 # RyanAir Developer Test Web App 
 
 [![AttemptedBy|AfzalAhmad](http://hillnews.tv/snapshots/attempted_by.png)](mailto://securedeveloper@gmail.com)
@@ -11,11 +18,11 @@ To accomplish this task, I have used following technologies :
 # Task Description
 ### Tast 01 - Cheap flight finder
 I have :
-> 01) buit a form through which user can enter two route places (source & destination)
-> 02) Implemented autocomplete functionality on place inputs
-> 03) Impleted datepicker on date selection inputs
-> 04) Implemented error handling on search form
-> 05) On search button press, Flights are searched through API request, and are displayed as list.
+ - buit a form through which user can enter two route places (source & destination)
+ - Implemented autocomplete functionality on place inputs
+ - Impleted datepicker on date selection inputs
+- Implemented error handling on search form
+- On search button press, Flights are searched through API request, and are displayed as list.
 
 ### Tast 02 - Route maps
 
@@ -34,7 +41,7 @@ There are two flags for `english` and `french` version, by pressing on each butt
 
 Please make sure that you have `.htaccess` file in root directory before running this application.
 
-```sh
+```c
 <IfModule mod_rewrite.c>
 
 RewriteEngine On
