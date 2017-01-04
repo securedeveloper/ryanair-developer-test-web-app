@@ -1,0 +1,27 @@
+{
+	"main": 
+	{
+		"title" : "Welcome to RyanAir",
+		"menu" : 
+		{
+			"item1" : "Find Cheap Flighst",
+			"item2" : "Route Maps"
+		}
+	},
+	
+	"flightFinder" : {
+		"pageTitle": "Let's search for cheap flights!",
+		"returnFlight" : "Return",
+		"from" : "From",
+		"to" : "To",
+		"depart":"Depart",
+		"return" : "Return",
+		"searchFlights":"Search Flights",
+		"error":"Some error occured!",
+		"noResultFound" : "No flight found, click to try again!"
+ 	},
+	
+	"routeMaps":{
+		"pageTitle" : "Route Maps"
+	}
+}
