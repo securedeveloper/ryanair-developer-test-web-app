@@ -7,7 +7,7 @@ usually you are required to set it to your localserver or hosted server path, in
 
 # RyanAir Developer Test Web App 
 
-[![AttemptedBy|AfzalAhmad](http://hillnews.tv/snapshots/attempted_by.png)](mailto://securedeveloper@gmail.com)
+[![AttemptedBy|AfzalAhmad](https://raw.githubusercontent.com/securedeveloper/Android-BabyNames-Application/master/screenshots/developedby.png)](mailto://securedeveloper@gmail.com)
 
 To accomplish this task, I have used following technologies : 
 
@@ -57,27 +57,24 @@ RewriteRule .* index.html [L]
 # Screenshots
 
 ### Simple Layout - English Version
-![](http://hillnews.tv/snapshots/EN_000.png)
+![](./snapshot/EN_000_SimpleLayout.png)
 ### Flight Search - English Version
-![](http://hillnews.tv/snapshots/EN_001.png)
+![](./snapshot/EN_001_FlightSearch.png)
 ### Route Maps - English Version
 Map is Zoomable, You can use cursor to navigate on map as well.
 
-![](http://hillnews.tv/snapshots/EN_002.png)
+![](./snapshot/EN_002_RouteMaps.png)
 ### Autocomplete - English Version
-![](http://hillnews.tv/snapshots/EN_003.png)
+![](./snapshot/EN_003_AutoFill.png)
 ### Datepicker - English Version 
 Restriction are applied on date selection.
 
-![](http://hillnews.tv/snapshots/EN_004.png)
+![](./snapshot/EN_004_DatePicker.png)
 ### Simple Layout - French Version
-![](http://hillnews.tv/snapshots/FR_000.png)
+![](./snapshot/FR_000_SimpleLayout.png)
 ### Flight Search - French Version
-![](http://hillnews.tv/snapshots/FR_001.png)
+![](./snapshot/FR_001_FlightSearch.png)
 ### Route Maps - French Version
-![](http://hillnews.tv/snapshots/FR_002.png)
+![](./snapshot/FR_002_RouteMaps.png)
 
-
-This is all about my test. For any further query. Please write me at `securedeveloper@gmail.com`.
-
- > Have good day.
+For any further query. Please write me at `securedeveloper@gmail.com`.
